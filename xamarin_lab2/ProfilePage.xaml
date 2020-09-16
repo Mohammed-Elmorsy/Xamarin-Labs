@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarin_lab2.ProfilePage">
+
+    <ScrollView>
+        <RelativeLayout BackgroundColor="DarkRed">
+            <!--cover-->
+            <BoxView BackgroundColor="Gray" RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=.25}" x:Name="cover"/>
+            <!--profile pic border-->
+            <BoxView BackgroundColor="Black" WidthRequest="110" HeightRequest="110" CornerRadius="55"
+            RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=cover,
+            Property=Width, 
+            Factor=.5 ,Constant=-55}" RelativeLayout.YConstraint="{ConstraintExpression 
+            Type=RelativeToView,
+            ElementName=cover,
+            Property=Height,Factor=1,Constant=-55}" />
+            <!--profile pic-->
+            <BoxView BackgroundColor="Red" WidthRequest="100" HeightRequest="100" CornerRadius="50"
+            RelativeLayout.XConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=cover,
+            Property=Width, 
+            Factor=.5 ,Constant=-50}" RelativeLayout.YConstraint="{ConstraintExpression 
+            Type=RelativeToView,
+            ElementName=cover,
+            Property=Height,Factor=1,Constant=-50}" x:Name="profilePic"/>
+            <!--username-->
+            <Label Text="Username" TextColor="White" FontSize="Medium" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=profilePic,
+            Property=Y,Factor=1,Constant=115}" 
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1}" HorizontalOptions="Center" />
+            <!--bio-->
+            <Label Text="bio + hashtags" TextColor="White" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=profilePic,
+            Property=Y,Factor=1,Constant=150}" Margin="10"/>
+            <!--accent color + primary color-->
+            <BoxView BackgroundColor="White" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=profilePic,
+            Property=Y,Factor=1,Constant=185}" RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1}" HeightRequest="50" x:Name="container"/>
+            <BoxView HeightRequest="40" WidthRequest="40" BackgroundColor="Black" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=profilePic,
+            Property=Y,Factor=1,Constant=190}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView,ElementName=container,Property=X,Factor=1,Constant=5}" x:Name="accent"/>
+            <Label Text="Accent Color" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=accent,
+            Property=Y,Factor=1,Constant=10}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView,ElementName=accent,Property=X,Factor=1,Constant=45}" />
+            <!--primary color-->
+            <BoxView HeightRequest="40" WidthRequest="40" BackgroundColor="Red" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=profilePic,
+            Property=Y,Factor=1,Constant=190}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=Width,Factor=.5}" x:Name="primary"/>
+            <Label Text="Primary Color" TextColor="Black" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=primary,
+            Property=Y,Factor=1,Constant=10}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToView,ElementName=primary,Property=X,Factor=1,Constant=45}" />
+            <!--form-->
+            <Label Text="Age :" TextColor="White" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=65}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=5}"/>
+            <Entry Keyboard="Numeric" Text="35" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=60}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=100}" TextColor="White" WidthRequest="300"/>
+
+            <Label Text="Interests :" TextColor="White" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=105}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=5}"/>
+
+            <Entry Keyboard="Text" Text="xamarin.forms" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=100}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=100}" TextColor="White" WidthRequest="300"/>
+
+            <Label Text="Ask me about :" TextColor="White" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=145}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=5}"/>
+
+            <Entry Keyboard="Chat" Text="c#,.NET" RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=container,
+            Property=Y,Factor=1,Constant=140}" RelativeLayout.XConstraint="{ConstraintExpression 
+            Type=RelativeToParent,Property=X,Factor=1,Constant=100}" TextColor="White" WidthRequest="300"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    
+</ContentPage>

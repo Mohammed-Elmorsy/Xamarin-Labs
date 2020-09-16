@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarin_lab2.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="ProfilePic"  WidthRequest="150" HeightRequest="150" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+            <Entry x:Name="PhoneEntry" Placeholder="Telephone" Keyboard="Numeric" />
+            <Button Text="Register" Clicked="OnClickRegister"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

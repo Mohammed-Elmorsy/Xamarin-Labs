@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_lab1.MainPage">
+
+    <StackLayout CompressedLayout.IsHeadless="False">
+        <!-- Place new controls here -->
+        <Slider Minimum="0" Maximum="100" MinimumTrackColor="Blue" ValueChanged="OnValueChanged"/>
+        <Label x:Name="sliderValue" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Display BoxView" />
+            <Switch IsToggled="false" HorizontalOptions="EndAndExpand" Toggled="OnToggled"/>
+        </StackLayout>
+
+        <ListView x:Name="colorList" ItemSelected="changeBoxViewColor">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Aqua</x:String>
+                    <x:String>Blue</x:String>
+                    <x:String>Green</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+
+        <Slider x:Name="op" Minimum="0" Maximum="1" Value="1" 
+                ValueChanged="OnValueChangedChangeOpacity"
+                MinimumTrackColor="Gold"/>
+        <Label x:Name="myBoxOpacity" />
+        <BoxView x:Name="myBox"  WidthRequest="100" HeightRequest="100"  />
+
+    </StackLayout>
+
+</ContentPage>

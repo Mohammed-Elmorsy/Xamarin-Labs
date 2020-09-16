@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarin_lab2.ContentView">
+    
+    <AbsoluteLayout>
+        <Label Text="Content View" FontSize="Large" FontAttributes="Bold" FontFamily="Tahoma" 
+               AbsoluteLayout.LayoutBounds=".5,0"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               />
+
+        <Label Text="snfrefnrenfnrrknfrfwfl jjj llhlksnfrefnrenfnrrknfrfwfl snfrefnrenfnrrknfrfwfl 
+                   snfrefnrenfnrrknfrfwfl lkbhvj snfrefnrenfnrrknfrfwfl snfrefnrenfnrrknfrfwfl 
+                   snfrefnrenfnrrknfrfwfl mhvjjb snfrefnrenfnrrknfrfwfl snfrefnrenfnrrknfrfwfl 
+                   snfrefnrenfnrrknfrfwfl bhvhmv snfrefnrenfnrrknfrfwfl snfrefnrenfnrrknfrfwfl 
+                   snfrefnrenfnrrknfrfwfl lklnbb snfrefnrenfnrrknfrfwfl " 
+                   AbsoluteLayout.LayoutBounds="0, .5, 1, .35"
+                   AbsoluteLayout.LayoutFlags="All" 
+                   BackgroundColor="Aqua"
+                   Padding="10" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   Margin="10" TextColor="Blue"/>
+        
+    </AbsoluteLayout>
+</ContentPage>
